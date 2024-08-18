@@ -1,7 +1,7 @@
 
 
 
-# 典型使用场景Tips
+# 典型使用场景Tips 
 ## ~~配置镜像加速~~
 20240606之后，应该加速的方式都逐步不可用了  
 获取阿里云镜像[加速地址](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)  
