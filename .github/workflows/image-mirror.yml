@@ -90,6 +90,8 @@ jobs:
           TARGET_REGISTRY: ${{ vars.TARGET_REGISTRY }}
         #处理body中的空格和tab和换行，并在结尾添加: ， 写入images.yml 文件
         run: | 
+          echo '{"insecure-registries": ["106.14.147.164:8005"]}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker
           echo "${{ github.event.issue.body }}" > images-init.yml 
           dos2unix              images-init.yml
           sed -i 's/^[ \t]*//g' images-init.yml
